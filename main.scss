@@ -1,5 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
 
+$light-font: 300;
+$regular-font: 400;
+$medium-font: 500;
+$bold-font: 600;
+$extra-bold-font: 700;  
+
 * {
   margin: 0;
   padding: 0;
@@ -32,11 +38,24 @@ body {
     height: 100vh;
     background: url("../img/21.png") no-repeat center;
     background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
 
     .black-overlay{
         position: absolute;
         inset: 0;
         background: rgba(0,0,0,.3);
+    }
+
+    .hero-text{
+      position: relative;
+      z-index: 1;
+
+      h1{
+        font-weight: $bold-font;
+      }
     }
 
 
