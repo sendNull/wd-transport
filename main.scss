@@ -32,10 +32,20 @@ body {
   height: 150vh;
   position: relative;
 
+  .about-section{
+    max-width: 100%;
+    height: 100vh;
+    background: maroon;
+
+    display: flex;
+
+
+  }
+
   .hero-section {
     position: relative;
     max-width: 100%;
-    height: 100vh;
+    min-height: 100vh;
     background: url("../img/hero-img.webp") no-repeat center;
     background-size: cover;
     display: flex;
@@ -61,8 +71,53 @@ body {
         font-size: clamp(2.5rem, 1.9231rem + 2.5641vw, 5rem);
         width: 50rem;
         line-height: 120%;
+        margin-bottom: 15px;
         // background: red;
 
+      }
+
+      p{
+        // font-size: 1.2rem;
+        font-size: clamp(1rem, 0.9538rem + 0.2051vw, 1.2rem);
+      }
+      
+    }
+
+    .scroll-box{
+      position: absolute;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      bottom: 5%;
+      left: 50%;
+      transform: translateX(-50%);
+      // font-size: 3rem;
+
+      a{
+        color: white;
+
+        .arrow-svg{
+          // display: block;
+          // font-size: 32px;
+          width: 32px;
+          height: 32px;
+          animation: fade 800ms linear infinite;
+
+          svg{
+            width: 40px;
+            // background: red;
+            margin: 0;
+            padding: 0;
+            display: block;
+          }
+
+          &:nth-child(1){
+            animation-delay: 100ms;
+          }
+          &:nth-child(2){
+            animation-delay: 200ms;
+          }
+        }
       }
     }
 
@@ -98,9 +153,29 @@ body {
           a {
             color: white;
             font-family: "Poppins", sans-serif;
+            transition: color 200ms ease;
+
+            &:hover{
+              color: #ACFB06;
+            }
           }
         }
       }
     }
   }
+}
+
+
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+  
+  
 }
