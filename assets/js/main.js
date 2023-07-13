@@ -1,4 +1,6 @@
 import 'boxicons';
+import 'swiper';
+import 'swiper/css';
 
 var navbar = document.querySelector("nav");
 
