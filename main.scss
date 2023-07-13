@@ -69,6 +69,12 @@ body {
       height: 30vh;
       background: green;
       overflow: hidden;
+
+      .swiper-wrapper{
+        .swiper-slide{
+          background: yellow;
+        }
+      }
     }
   }
 

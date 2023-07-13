@@ -14,6 +14,7 @@ window.addEventListener("scroll", () => {
 
 let reviewCarousel = new Swiper(".review-carousel", {
     loop: true,
+    autoplay: true,
 
     // If we need pagination
     pagination: {
