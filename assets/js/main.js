@@ -1,6 +1,9 @@
 import 'boxicons';
-import Swiper from 'swiper';
-import 'swiper/css';
+// import Swiper bundle with all modules installed
+import Swiper from 'swiper/bundle';
+
+// import styles bundle
+import 'swiper/css/bundle';
 
 var navbar = document.querySelector("nav");
 
@@ -9,6 +12,6 @@ window.addEventListener("scroll", () => {
 })
 
 
-let reviewCarousel = new Swiper(".review-carousel", {
+// let reviewCarousel = new Swiper(".review-carousel", {
     
-})
+// })
