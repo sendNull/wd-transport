@@ -40,10 +40,120 @@ body {
   // height: 150vh;
   position: relative;
 
+  .rental-section{
+    max-width: 100%;
+    height: 100vh;
+    // background: maroon;
+    padding-top: 3rem;
+
+    .title-background{
+      position: relative;
+      width: 100%;
+      padding: 5% 0;
+      background: url("../img/rental-background.webp") no-repeat center;
+      background-size: cover;
+      // filter: brightness(80%);
+
+      .black-overlay{
+        position: absolute;
+        inset: 0;
+        background: rgba(0,0,0,.3);
+      }
+
+      h1{
+        position: relative;
+        z-index: 2;
+        color: $white;
+
+        // margin: auto;
+        text-align: center;
+        font-weight: $bold-font;
+        font-size: clamp(2.5rem, 2.2692rem + 1.0256vw, 3.5rem);
+      }
+    }
+
+    .grid-card{
+      width: 100%;
+      min-height: 50vh;
+      padding: 3rem clamp(1rem, -3.3846rem + 19.4872vw, 20rem);
+
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      // grid-template-rows: repeat(auto-fill, minmax(300px, 1fr));
+      justify-content: center;
+      gap: 2rem;
+
+      .card{
+        background: $white;
+        // border: 2px solid red;
+        // box-shadow: 0px 10px 36px 5px rgba(0,0,0,0.1);
+        box-shadow: 0px 10px 24px -4px rgba(0,0,0,0.1);
+        padding: 2rem;
+        border-radius: 15px;
+        transition: 500ms cubic-bezier(0.23,1,0.32,1);
+
+        &:hover{
+          transform: translateY(-10px);
+          box-shadow: 0px 10px 36px -4px rgba(0,0,0,0.1);
+          // box-shadow: 0px 10px 29px 8px rgba(0,0,0,0.1);
+        }
+
+        .car-img{
+          width: 100%;
+          height: 25vh;
+          // background: maroon;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          padding: 1rem;
+
+          img{
+            width: 100%;
+            // height: 100%;
+            object-fit: cover;
+          }
+        }
+
+        .car-name{
+          margin-top: 15px;
+          font-weight: $bold-font;
+          font-size: 2.5rem;
+        }
+        .car-price{
+          font-weight: $medium-font;
+          font-size: 1.3rem;
+        }
+
+        .more-info{
+          width: max-content;
+          position: relative;
+          display: flex;
+          align-items: center;
+          margin-top: 5px;
+          gap: 5px;
+
+          &:hover{
+            i{
+              transform: rotate(-45deg);
+            }
+          }
+
+          i{
+            font-size: 1.5rem;
+            // margin: auto;
+            transition: 500ms cubic-bezier(0.23,1,0.32,1);
+          }
+        }
+      }
+    }
+
+    
+  }
+
   .benefits-section{
     padding-top: 3rem;
     max-width: 100%;
-    min-height: 100vh;
+    // min-height: 100vh;
     font-size: clamp(1rem, 0.8846rem + 0.5128vw, 1.5rem);
     // padding: 0 10rem;
 
@@ -61,6 +171,7 @@ body {
 
     .benefits{
       padding-top: 2rem;
+      padding-bottom: 2rem;
       max-width: 100%;
       // height: 50vh;
       // background: maroon;
@@ -84,6 +195,7 @@ body {
           // background: yellow;
           border-radius: 20px;
           border: 2px solid $black;
+          
         }
       }
     }
@@ -213,7 +325,7 @@ body {
     // max-width: 100%;
     // height: 20vh;
     // background: #0a0a0a;
-    padding: 2rem 3rem;
+    padding: 2rem clamp(1rem, 0.5385rem + 2.0513vw, 3rem);
     display: flex;
     align-items: center;
     justify-content: space-between;
