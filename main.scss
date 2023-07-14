@@ -48,11 +48,18 @@ body {
   }
 
   .owner-quote-section{
+    position: relative;
     max-width: 100%;
     height: 40vh;
     background: url("../img/owner-photo.webp") no-repeat;
     background-position: 0 30%;
     background-size: cover;
+
+    .black-overlay{
+      position: absolute;
+      inset: 0;
+      background: rgba(0,0,0,.3);
+    }
   }
 
   .review-section{
