@@ -43,5 +43,13 @@ let reviewCarousel = new Splide(".review-carousel", {
     easing: 'cubic-bezier(0.08,0.82,0.17,1)',
     speed: 800,
 
+    breakpoints:{
+        500: {
+            padding: '0',
+            arrows: false,
+            drag: true,
+        }
+    }
+
 });
     reviewCarousel.mount();
