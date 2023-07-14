@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./assets/css/main.css" />
+    
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <title>WD Transport | Local</title>
   </head>
@@ -208,22 +209,29 @@
 
         <h1><span class="highlights">Ulasan</span> Kami</h1>
 
-        <div class="swiper review-carousel">
-          <!-- Additional required wrapper -->
+        <section class="splide review-carousel" aria-label="Splide Basic HTML Example">
+          <div class="splide__track">
+            <ul class="splide__list">
+              <li class="splide__slide"></li>
+              <li class="splide__slide">Slide 02</li>
+              <li class="splide__slide">Slide 03</li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- <div class="swiper review-carousel">
+
           <div class="swiper-wrapper">
-            <!-- Slides -->
+
             <div class="swiper-slide">Slide 1</div>
             <div class="swiper-slide">Slide 2</div>
             <div class="swiper-slide">Slide 3</div>
-            ...
           </div>
-          <!-- If we need pagination -->
-          <div class="swiper-pagination"></div>
-        
-          <!-- If we need navigation buttons -->
+
           <div class="swiper-button-prev"></div>
           <div class="swiper-button-next"></div>
-        </div>
+        </div> -->
+
       </div>
 
 

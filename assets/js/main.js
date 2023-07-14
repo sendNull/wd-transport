@@ -1,9 +1,13 @@
 import 'boxicons';
 // import Swiper bundle with all modules installed
-import Swiper from 'swiper/bundle';
+// import Swiper from 'swiper/bundle';
 
 // import styles bundle
-import 'swiper/css/bundle';
+// import 'swiper/css/bundle';
+
+import Splide from '@splidejs/splide';
+import '@splidejs/splide/css';
+import Swiper from 'swiper';
 
 var navbar = document.querySelector("nav");
 
@@ -12,18 +16,32 @@ window.addEventListener("scroll", () => {
 })
 
 
-let reviewCarousel = new Swiper(".review-carousel", {
-    loop: true,
-    autoplay: true,
+// let reviewCarousel = new Swiper(".review-carousel", {
+//     loop: true,
+//     autoplay: true,
+//     spaceBetween: 30,
+//     slidesPerView: "auto",
+//     // parallax: true,
 
-    // If we need pagination
-    pagination: {
-        el: '.swiper-pagination',
-    },
+//     // Navigation arrows
+//     navigation: {
+//         nextEl: '.swiper-button-next',
+//         prevEl: '.swiper-button-prev',
+//     },
+// })
 
-    // Navigation arrows
-    navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-    },
-})
+// reviewCarousel.init();
+
+let reviewCarousel = new Splide(".review-carousel", {
+    type   : 'loop',
+    padding: '20%',
+    height: '100%',
+    focus: 'center',
+    pagination: false,
+    updateOnMove: true,
+    gap: '2em',
+    easing: 'cubic-bezier(0.08,0.82,0.17,1)',
+    speed: 800,
+
+});
+    reviewCarousel.mount();

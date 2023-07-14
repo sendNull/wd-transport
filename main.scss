@@ -46,7 +46,7 @@ body {
     // background: red;
     padding: 5% 0;
     display: flex;
-    gap: 15px;
+    gap: 30px;
     flex-direction: column;
     align-items: center;
     justify-content: center;
@@ -67,14 +67,44 @@ body {
     .review-carousel{
       width: 50vw;
       height: 30vh;
-      background: green;
-      overflow: hidden;
 
-      .swiper-wrapper{
-        .swiper-slide{
-          background: yellow;
+
+      // background: green;
+      // overflow: visible !important;
+      .splide__track{
+        height: 100%;
+        
+        .splide__list{
+          
+          .splide__slide{
+            position: relative;
+            
+            height: 100%;
+            background: #ececec;
+            opacity: 0.7;
+            border-radius: 20px;
+            transition: opacity 500ms ease;
+            padding: 1.5rem;
+
+            &.is-active{
+              opacity: 1;
+            }
+          }
         }
       }
+
+      // .swiper-wrapper{
+      //   transition-duration: 1s;
+      //   transition-timing-function: cubic-bezier(0.86,0,0.07,1);
+      //   // padding: 1.5rem;
+      //   .swiper-slide{
+      //     width: 80%;
+      //     border-radius: 20px;
+      //     background: #f6f6f6;
+      //   }
+      // }
+
+
     }
   }
 
