@@ -36,6 +36,8 @@ let reviewCarousel = new Splide(".review-carousel", {
     type   : 'loop',
     padding: '20%',
     height: '100%',
+    autoplay: true,
+    drag: false,
     focus: 'center',
     pagination: false,
     updateOnMove: true,

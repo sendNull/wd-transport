@@ -54,11 +54,37 @@ body {
     background: url("../img/owner-photo.webp") no-repeat;
     background-position: 0 30%;
     background-size: cover;
+    color: $white;
+    display: flex;
+    align-items: center;
 
     .black-overlay{
       position: absolute;
       inset: 0;
       background: rgba(0,0,0,.3);
+    }
+
+    
+
+    .quote-box{
+      position: relative;
+      z-index: 2;
+      margin: 0 auto;
+      max-width: 50vw;
+      text-align: center;
+      
+      // background: crimson;
+
+      .quote{
+        font-size: 2rem;
+        font-weight: $medium-font;
+      }
+
+      .name{
+        font-size: 1.3rem;
+        margin-top: 1rem;
+        // color: $green-primary;
+      }
     }
   }
 
