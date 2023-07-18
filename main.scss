@@ -25,6 +25,10 @@ $green-primary: #ACFB06;
 
 html {
   overflow-x: hidden;
+
+  &.hidden{
+    overflow: hidden;
+  }
 }
 
 body {
@@ -43,8 +47,71 @@ body {
   .contact-section{
     margin-top: 3rem;
     max-width: 100%;
-    height: 60vh;
-    background: black;
+    // height: 60vh;
+    background: $black;
+    color: $white;
+    padding: 2rem clamp(1rem, 0.7692rem + 1.0256vw, 2rem);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .box-container{
+      width: 65vw;
+      // height: 30vh;
+      // background: green;
+
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 2rem;
+
+      .box-item{
+        // width: 30rem;
+        // background: yellow;
+        // border: 1px solid yellow;
+        
+        p{
+          a{
+            color: $white;
+          }
+        }
+        
+
+        h3{
+          font-size: 1.4rem;
+          font-weight: $bold-font;
+          padding: 10px 0;
+          position: relative;
+          width: max-content;
+          margin-bottom: 10px;
+          &::before{
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: $green-primary;
+          }
+        }
+        img{
+          width: 70%;
+        }
+        .desc{
+          font-size: 14px;
+          margin-top: 10px;
+
+          &.email{
+            
+
+            a{
+              color: $green-primary;
+              text-decoration: underline;
+            }
+          }
+        }
+      }
+    }
+
   }
 
   .owner-quote-section{
@@ -76,12 +143,12 @@ body {
       // background: crimson;
 
       .quote{
-        font-size: 2rem;
+        font-size: clamp(1.5rem, 1.3846rem + 0.5128vw, 2rem);
         font-weight: $medium-font;
       }
 
       .name{
-        font-size: 1.3rem;
+        font-size: clamp(1rem, 0.9308rem + 0.3077vw, 1.3rem);
         margin-top: 1rem;
         // color: $green-primary;
       }
@@ -259,10 +326,16 @@ body {
           position: relative;
           display: flex;
           align-items: center;
-          margin-top: 5px;
+          margin-top: 15px;
           gap: 5px;
+          padding: 13px 1rem;
+          background: #007BFF;
+          color: white;
+          border-radius: 5px;
+          transition: 500ms ease;
 
           &:hover{
+            background: #3396ff;
             i{
               transform: rotate(-45deg);
             }
@@ -360,6 +433,7 @@ body {
         color: $black;
 
         h1{
+          font-size: clamp(1.5rem, 1.0385rem + 2.0513vw, 3.5rem);
           font-weight: $bold-font;
           margin-bottom: 1.5rem;
         }
@@ -465,10 +539,18 @@ body {
       background: #0a0a0a;
     }
 
+    &.active-menu{
+      background: #0a0a0a;
+    }
+
     a {
       img {
         width: 150px;
       }
+    }
+
+    .hamburger{
+      display: none;
     }
 
     .menu {
@@ -478,6 +560,10 @@ body {
         gap: 2rem;
 
         li {
+
+          &.menu-title{
+            display: none;
+          }
           a {
             color: white;
             font-family: "Poppins", sans-serif;
@@ -489,6 +575,22 @@ body {
           }
         }
       }
+    }
+  }
+
+  .blur-overlay{
+    position: fixed;
+    inset: 0;
+    z-index: 5;
+    pointer-events:none;
+    transition: all 500ms ease;
+
+    &.active{
+      background: rgba(10, 10, 10, 0.12);
+      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+      backdrop-filter: blur(3.6px);
+      -webkit-backdrop-filter: blur(3.6px);
+      pointer-events:fill;
     }
   }
 }
