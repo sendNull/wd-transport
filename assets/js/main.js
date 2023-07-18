@@ -1,7 +1,7 @@
 import 'boxicons';
 
 import Splide from '@splidejs/splide';
-import '@splidejs/splide/css';
+// import '@splidejs/splide/css';
 
 var navbar = document.querySelector("nav");
 
