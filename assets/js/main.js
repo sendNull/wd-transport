@@ -1,13 +1,7 @@
 import 'boxicons';
-// import Swiper bundle with all modules installed
-// import Swiper from 'swiper/bundle';
-
-// import styles bundle
-// import 'swiper/css/bundle';
 
 import Splide from '@splidejs/splide';
 import '@splidejs/splide/css';
-import Swiper from 'swiper';
 
 var navbar = document.querySelector("nav");
 
